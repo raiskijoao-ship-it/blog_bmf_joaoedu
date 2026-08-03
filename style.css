@@ -19,7 +19,7 @@ header{
     margin:0 auto;
     padding: 16px;
 }
-{
+main{
     background-color: var(--cor-segundaria);
     color:var(--cor-primaria)
     text-align: center;
@@ -28,3 +28,20 @@ header{
     display:flex;
     flex-wrap:wrap;
 }
+
+    article{
+        display:flex;
+        box: shadow 2px 2px 10px( rgba(0,0,0));
+        margin: 16px;
+        gap:16px ;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-self: center;
+
+
+}
+ img{
+    width: 80px;
+    height: 80px;
+ }
