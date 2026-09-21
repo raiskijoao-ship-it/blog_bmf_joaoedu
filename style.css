@@ -1,47 +1,185 @@
-:root{
+:root {
     --cor-primaria: #2941ce;
-    --cor-segundaria: #ecf0fc;
+    --cor-secundaria: #ecf0fc;
     --cor-fundo: #6c6cf0;
-    --cor-texto: #889aff;
-    --cor-contraste: #6193ff;
+    --cor-texto: #26346b;
+    --cor-contraste: #ffffff;
     --cor-botao: #7a83ff;
+    --cor-card: #ffffff;
 }
 
-body{
-    max-width: 100vw;
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(135deg, #6c6cf0, #2941ce);
+    color: var(--cor-texto);
 }
 
-header{
-    background-color: var(--cor-primaria);
-    color:var(--cor-contraste);
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #2941ce, #5668f5);
+    color: var(--cor-contraste);
     text-align: center;
-    margin:0 auto;
-    padding: 16px;
+    padding: 35px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+
+    /* Animação de entrada */
+    animation: aparecer 0.8s ease;
 }
-main{
-    background-color: var(--cor-segundaria);
-    color:var(--cor-primaria)
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Área principal */
+main {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
     text-align: center;
-    margin:0 auto;
-    padding: 16px;
-    display:flex;
-    flex-wrap:wrap;
+    padding: 40px 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
 }
 
-    article{
-        display:flex;
-        box: shadow 2px 2px 10px( rgba(0,0,0));
-        margin: 16px;
-        gap:16px ;
-        flex-direction: column;
-        text-align: center;
-        align-items: center;
-        justify-self: center;
+/* Cards */
+article {
+    width: 260px;
+    min-height: 300px;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    background: var(--cor-card);
+    padding: 25px;
+    border-radius: 20px;
+
+    box-shadow: 0 8px 20px rgba(41, 65, 206, 0.18);
+
+    text-align: center;
+
+    /* Animação de entrada */
+    animation: subir 0.7s ease both;
+
+    /* Transição para o hover */
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
- img{
-    width: 80px;
-    height: 80px;
- }
+
+/* Efeito ao passar o mouse */
+article:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 15px 30px rgba(41, 65, 206, 0.3),
+        0 0 20px rgba(122, 131, 255, 0.25);
+
+    background-color: #f8f9ff;
+}
+
+/* Imagens */
+article img {
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 18px;
+
+    border: 4px solid var(--cor-botao);
+
+    box-shadow: 0 5px 15px rgba(41, 65, 206, 0.25);
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+/* Animação da imagem */
+article:hover img {
+    transform: rotate(8deg) scale(1.1);
+
+    box-shadow:
+        0 0 0 8px rgba(122, 131, 255, 0.15),
+        0 8px 20px rgba(41, 65, 206, 0.3);
+}
+
+/* Títulos dos cards */
+article h2 {
+    color: var(--cor-primaria);
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+/* Texto dos cards */
+article p {
+    color: #59658f;
+    line-height: 1.5;
+}
+
+/* Botão */
+button {
+    margin-top: 18px;
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 25px;
+
+    background: linear-gradient(
+        135deg,
+        var(--cor-botao),
+        var(--cor-primaria)
+    );
+
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(41, 65, 206, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Hover do botão */
+button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 8px 20px rgba(41, 65, 206, 0.4);
+}
+
+/* Clique do botão */
+button:active {
+    transform: scale(0.95);
+}
+
+/* Animação de entrada */
