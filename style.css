@@ -241,3 +241,16 @@ button:active {
         max-width: 350px;
     }
 }
+
+main {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 30px !important;
+}
+
+article {
+    width: 300px !important;
+    flex: 0 0 300px !important;
+}
