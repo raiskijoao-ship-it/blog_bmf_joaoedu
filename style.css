@@ -7,9 +7,7 @@
     --cor-botao: #7a83ff;
     --cor-card: #ffffff;
 }
-
-/* Configurações gerais */
-* {
+{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
